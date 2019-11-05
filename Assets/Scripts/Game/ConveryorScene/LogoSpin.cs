@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrashController : MonoBehaviour
+public class LogoSpin : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float spinSpeed;
+    float rotZ;
     void Start()
     {
         
@@ -13,6 +14,7 @@ public class TrashController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.eulerAngles = new Vector3(0, 0, rotZ);
+        rotZ += spinSpeed;
     }
 }
